@@ -2,12 +2,14 @@
 #include <stdlib.h>
 #include <time.h>
 
+//Como aumentar o tamanho de um vetor com a função realloc?
+
 int main(){
     int i, tam, *vet;
 
     printf("Digite o tamanho do vetor: ");
     scanf("%d", &tam);
-    srand(time(NULL));
+    srand(time(NULL));//sortei numeros de acordo com o horario do SO
 
     vet = malloc(tam * sizeof(int));
 
@@ -19,6 +21,16 @@ int main(){
         for(i = 0; i < tam; i++){
             printf(" %d ", *(vet +i ));
         }
+
+        printf("Digite o novo tamanho do vetor: ");
+        scanf("%d", &tam);
+
+        vet = realloc(vet, tam);
+
+        for(i = 0; i < tam; i++){
+            *(vet + i) = rand() % 100;
+        }
+
     }else{
         printf("Erro ao alocar memoria\n");
     }
