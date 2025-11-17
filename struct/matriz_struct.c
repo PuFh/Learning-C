@@ -39,14 +39,22 @@ Pessoa lerpessoa(){
 }
 
 int main() {
-    int i;
-    Pessoa pessoas[3];
+    int i,t;
+    Pessoa pessoas[2][2];
     
-    for( i = 0; i < 3; i++)
-        pessoas[i] = lerpessoa();
+    for( i = 0; i < 2; i++){
+        for (t = 0; t < 2; t++){
+            pessoas[i][t] = lerpessoa();
+            //lerpessoa(pessoas[i][i]);
+        }
+    }
+        
 
-    for( i = 0; i < 3; i++)
-       imprimirPessoa(pessoas[i]);
+    for( i = 0; i < 2; i++){
+        for (t = 0; t < 2; t++){
+                imprimirPessoa(pessoas[i][t]);
+        }
+    }
     
 
     return 0;
