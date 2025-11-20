@@ -18,6 +18,7 @@ typedef struct no{
 
 Pessoa ler_pessoa(){
     Pessoa p;
+
     scanf("%d%d%d",&p.data.dia, &p.data.mes, &p.data.ano);
     return p;
 }
@@ -26,8 +27,8 @@ void imprimirPessoa(Pessoa p){
     printf("\tData nas: %d/%d/%d\n\n",p.data.dia, p.data.mes, p.data.ano);
 }
 
-//FUncao de empilhar
-*** empilhar(No *topo){
+//FUncao para a operacao push (empilhar)
+No* empilhar(No *topo){
     No *novo = malloc(sizeof(No));
 
     if(novo){
@@ -62,8 +63,8 @@ int main(){
 
                 break;
             default:
-
-                break;;
+                if(opcao != 0)
+                    printf("\nOpcao invalida!!!\n");
         }
-    }
+    }while(opcao !=0);
 }
