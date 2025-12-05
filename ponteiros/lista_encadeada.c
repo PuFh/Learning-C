@@ -11,12 +11,33 @@ typedef struct{
     int tam;
 }Lista;
 
-void inserirInicio(Lista *lista, int valor){
+void inserirInicio(Lista *lista, int v){
     No *novo = (No*)malloc(sizeof(No));
-    novo->valor = valor;//(*novo).valor = valor(valor do parametro)
+    novo->valor = v;
     novo->proximo = lista->inicio;
-    
 
+    //fazendo que o iniciio seja apontado para este novoo no
+    lista->inicio = novo;
+    lista->tam++;
+
+
+}
+
+void inserirFim(Lista *lista, int v){
+    No *ax,*novo = (No*)malloc(sizeof(No));
+    novo->valor = v;
+
+    novo->proximo= NULL;
+    if(lista->inicio == NULL){
+        lista->inicio = novo;
+        lista->tam++;
+    }else{
+        ax = ax->proximo;
+        while(ax->proximo != NULL){
+            ax = ax->proximo;
+        }
+        
+    }
 
 }
 
