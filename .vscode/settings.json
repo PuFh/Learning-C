@@ -1,5 +1,8 @@
 {
     "files.associations": {
-        "struct-in-struct": "c"
+        "*.dbclient-js": "javascript",
+        "struct-in-struct": "c",
+        "listA.C": "cpp",
+        "iostream": "cpp"
     }
 }

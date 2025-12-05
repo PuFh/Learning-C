@@ -4,8 +4,9 @@
 #include <unistd.h>
 #include <time.h>   
 
+ 
 #define MAX_SIZE 10000
-#define NUM_TESTES 10
+#define NUM_TESTES 10#include <iostream>
 
 typedef struct {
     int dados[MAX_SIZE];
@@ -26,7 +27,7 @@ typedef struct NoDuplo {
 void iniciar_timer(struct tms *t) {
     times(t);
 }
-
+#include <iostream>
 double parar_timer(struct tms *t_ini, struct tms *t_fim) {
     times(t_fim);
     long clk_tck = sysconf(_SC_CLK_TCK);
