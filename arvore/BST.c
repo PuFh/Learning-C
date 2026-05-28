@@ -16,6 +16,11 @@ No* busca(No*, int);
 int main(){
     No* BST = NULL;
 
+    BST = insere(BST, 6);
+    BST = insere(BST, 8);
+    BST = insere(BST, 9);
+    BST = insere(BST, 5);
+    BST = busca(BST, 12);
 
     return 0;
 }
@@ -26,6 +31,9 @@ No* criaNo(int v){
     novo->valor = v;
     novo->esq = NULL;
     novo->dir = NULL;
+
+
+
     return novo;
 }
 
